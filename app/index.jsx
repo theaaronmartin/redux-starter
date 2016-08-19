@@ -25,7 +25,7 @@ function counter(state = 0, action) {
 
 // Create a Redux store holding the state of your app.
 // Its API is { subscribe, dispatch, getState }.
-let store = createStore(counter);
+let store = createStore(counter, window.devToolsExtension && window.devToolsExtension());
 
 // You can use subscribe() to update the UI in response to state changes.
 // Normally you’d use a view binding library (e.g. React Redux) rather than subscribe() directly.
